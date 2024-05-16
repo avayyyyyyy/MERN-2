@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 export default function App() {
   const [test, setTest] = useState([{ name: "abhi" }]);
   const [selectedCardName, setSelectedCardName] = useState("null");
-  const [sortOrder, setSortOrder] = useState("asc");
 
   useEffect(() => {
     testfunc();
@@ -25,7 +24,6 @@ export default function App() {
       return a.name.localeCompare(b.name);
     });
     setTest(sortedTest);
-    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
   };
 
   return (
